@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="ru" data-assets="../assets/">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GoldenSkate Самсун — школа фигурного катания русской школы</title>
+<meta name="description" content="Фигурное катание для детей в Самсуне. Тренеры из России, лёд + хореография + ОФП в одной программе. Бесплатное пробное занятие.">
+<link rel="canonical" href="https://golden-skate.com/ru/">
+<link rel="alternate" hreflang="tr" href="https://golden-skate.com/tr/">
+<link rel="alternate" hreflang="ru" href="https://golden-skate.com/ru/">
+<link rel="alternate" hreflang="en" href="https://golden-skate.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://golden-skate.com/">
+<meta property="og:title" content="GoldenSkate Самсун — школа фигурного катания русской школы">
+<meta property="og:description" content="Фигурное катание для детей в Самсуне. Тренеры из России, лёд + хореография + ОФП в одной программе. Бесплатное пробное занятие.">
+<meta property="og:url" content="https://golden-skate.com/ru/">
+<meta property="og:image" content="https://golden-skate.com/assets/img/poster-teal.webp">
+<meta property="og:locale" content="ru_RU">
+<meta name="theme-color" content="#061a20">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+<link rel="stylesheet" href="../assets/base.css?v=19">
+<link rel="stylesheet" href="../assets/style.css?v=19">
+</head>
+<body>
+
+<header class="top" data-top>
+  <a class="brand" href="#top" aria-label="GoldenSkate Samsun">
+    <svg class="brand__mark" viewBox="0 0 64 24" aria-hidden="true">
+      <path d="M9 15.5C22 20.5 44 20.5 60 12.5C46 15 24 15 11 11.2" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M11 11.2L7.6 11.6L9.4 13.1L5.8 13.6L8.2 15L4.6 15.6L9 15.5" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/>
+    </svg>
+    <span class="brand__word">Golden Skate<small>Samsun</small></span>
+  </a>
+  <nav class="nav" data-nav aria-label="Primary">
+    <a href="#school" data-i18n="nav.method">Школа</a>
+    <a href="#coaches" data-i18n="nav.coaches">Тренеры</a>
+    <a href="#results" data-i18n="nav.results">Результаты</a>
+    <a href="#stories" data-i18n="nav.stories">Видео</a>
+    <a href="#groups" data-i18n="nav.pricing">Группы</a>
+    <a href="#contact" data-i18n="nav.contact">Контакты</a>
+  </nav>
+  <div class="top__end">
+    <div class="langs" role="group" aria-label="Язык" data-i18n-aria="lang.label">
+      <a data-lang="tr" hreflang="tr" lang="tr" href="../tr/">TR</a><a class="is-active" aria-current="page" data-lang="ru" hreflang="ru" lang="ru" href="../ru/">RU</a><a data-lang="en" hreflang="en" lang="en" href="../en/">EN</a>
+    </div>
+    <a class="icon-btn" data-wa target="_blank" rel="noopener" href="#" aria-label="WhatsApp"><svg><use href="../assets/icons.svg#wa"/></svg></a>
+    <a class="btn btn--ghost top__cta" href="#contact" data-i18n="cta.trial">Бесплатное пробное занятие</a>
+    <button class="burger" type="button" data-nav-toggle aria-expanded="false" aria-label="Меню" data-i18n-aria="nav.menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <video class="hero__video" data-hero autoplay muted loop playsinline preload="auto" poster="../assets/img/poster-teal.webp">
+      <source src="../assets/video/hero-a-720.mp4" type="video/mp4" media="(max-width: 800px)">
+      <source src="../assets/video/hero-a-1080.webm" type='video/webm; codecs="av01.0.08M.10"'>
+      <source src="../assets/video/hero-a-1080.mp4" type="video/mp4">
+    </video>
+    <div class="hero__shade"></div>
+    <div class="hero__inner">
+      <p class="eyebrow" data-i18n="hero.eyebrow">Самсун · фигурное катание русской школы</p>
+      <h1 class="hero__title" data-i18n="hero.title">От первого шага на льду<br>до первого акселя.</h1>
+      <svg class="hero__trace" viewBox="0 0 600 40" aria-hidden="true"><path d="M2 30C120 34 210 6 300 18S470 40 520 20C548 9 560 30 540 32C520 34 528 12 598 10" pathLength="1"/></svg>
+      <p class="hero__sub" data-i18n="hero.sub">Тренеры из России соединяют лёд, хореографию и ОФП в одну программу для детей от 3 лет.</p>
+      <div class="hero__ctas">
+        <a class="btn btn--gold" href="#contact" data-i18n="cta.trial">Бесплатное пробное занятие</a>
+        <a class="btn btn--line" data-wa target="_blank" rel="noopener" href="#"><svg class="ico"><use href="../assets/icons.svg#wa"/></svg><span data-i18n="cta.wa">Написать в WhatsApp</span></a>
+      </div>
+    </div>
+    <ul class="hero__facts">
+      <li data-i18n="hero.f1">В Самсуне с октября 2025</li>
+      <li data-i18n="hero.f2">С 3 лет</li>
+      <li data-i18n="hero.f3">Тренеры из России</li>
+    </ul>
+  </section>
+
+  <div class="flow" data-flow>
+    <svg class="tracing" data-tracing preserveAspectRatio="none" aria-hidden="true"><path vector-effect="non-scaling-stroke"/></svg>
+
+    <section class="school" id="school">
+      <div class="school__grid">
+        <div class="school__head" data-reveal>
+          <p class="eyebrow" data-i18n="method.eyebrow">Русская школа</p>
+          <h2 data-i18n="method.title">Красивое катание начинается с базы.</h2>
+          <p class="lead" data-i18n="method.lead">Мы — первый и единственный клуб русской школы фигурного катания в Самсуне. До прыжков ставим рёбра, осанку и координацию: не быстрый результат, а техника, которая остаётся.</p>
+          <p class="school__one" data-i18n="method.one">Всё в одном клубе, по одному абонементу.</p>
+        </div>
+        <div class="school__list">
+          <article class="pillar" data-reveal>
+            <img src="../assets/img/m-ice.webp" alt="" loading="lazy" width="1000" height="1500">
+            <div><h3 data-i18n="method.ice.t">Лёд</h3><p data-i18n="method.ice.d">Скольжение, рёбра, вращения и прыжки. Ошибки каждого спортсмена разбираем индивидуально.</p></div>
+          </article>
+          <article class="pillar" data-reveal>
+            <img src="../assets/img/m-ballet.webp" alt="" loading="lazy" width="1000" height="1500">
+            <div><h3 data-i18n="method.ballet.t">Хореография</h3><p data-i18n="method.ballet.d">Осанка, растяжка и музыкальность. Программа — это не только элементы, но и красота движения.</p></div>
+          </article>
+          <article class="pillar" data-reveal>
+            <img src="../assets/img/m-office.webp" alt="" loading="lazy" width="1000" height="1500">
+            <div><h3 data-i18n="method.off.t">ОФП</h3><p data-i18n="method.off.d">Сила, взрывная мощь и координация. Каждый прыжок сначала осваиваем в зале, потом переносим на лёд.</p></div>
+          </article>
+        </div>
+      </div>
+      <aside class="founder" data-reveal>
+        <img src="../assets/img/coach-olga.webp" alt="Olga Tikhankina" loading="lazy" width="900" height="1350">
+        <div>
+          <p class="eyebrow" data-i18n="founder.label">Основатель</p>
+          <p class="founder__name">Olga Tikhankina</p>
+          <p data-i18n="founder.text">GoldenSkate — самсунский филиал сети школ «Golden Star» из Подмосковья. В сети работают больше 15 тренеров; лучшие — в Самсуне.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="coaches" id="coaches">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow" data-i18n="coaches.eyebrow">Тренеры</p>
+        <h2 data-i18n="coaches.title">Команда, которая привезла русскую школу в Самсун.</h2>
+        <p class="lead" data-i18n="coaches.lead">Наши тренеры выросли в российском фигурном катании и готовили там спортсменов. На занятиях — та же система: база, порядок, каждый день маленький шаг.</p>
+      </div>
+      <div class="coaches__grid">
+        <article class="coach" data-reveal>
+          <figure><img src="../assets/img/coach-daniil.webp" alt="Daniil Averkiev" loading="lazy" width="900" height="1350"></figure>
+          <p class="coach__rank" data-i18n="coach.daniil.rank">Мастер спорта</p>
+          <h3>Daniil Averkiev</h3>
+          <p class="coach__role" data-i18n="coach.daniil.role">ОФП и физическое развитие</p>
+          <p class="coach__bio" data-i18n="coach.daniil.bio">Отвечает за физическую подготовку: координация, выносливость и взрывная сила для прыжков.</p>
+        </article>
+        <article class="coach" data-reveal>
+          <figure><img src="../assets/img/coach-alina.webp" alt="Alina Shafranova" loading="lazy" width="900" height="1350"></figure>
+          <p class="coach__rank" data-i18n="coach.alina.rank">Кандидат в мастера спорта</p>
+          <h3>Alina Shafranova</h3>
+          <p class="coach__role" data-i18n="coach.alina.role">Техника катания</p>
+          <p class="coach__bio" data-i18n="coach.alina.bio">Тренирует больше 5 лет. Ставит технику с самого юного возраста до официальных спортивных разрядов.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="results" id="results">
+      <div class="results__head" data-reveal>
+        <p class="eyebrow" data-i18n="results.eyebrow">Результаты</p>
+        <h2 data-i18n="results.title">Итоги первого сезона.</h2>
+        <p class="lead" data-i18n="results.lead">Клуб открылся в октябре 2025. За год наши ученики выступили в Турции и России, сдали тесты федерации и сделали первые сложные прыжки.</p>
+      </div>
+      <div class="results__grid">
+        <figure class="results__photo" data-reveal>
+          <img src="../assets/img/r-podium.webp" alt="" loading="lazy" width="1000" height="1500">
+          <figcaption>İzmir · 2026</figcaption>
+        </figure>
+        <div class="results__body">
+          <ul class="awards" data-reveal>
+            <li class="aw aw--silver"><svg class="aw__icon"><use href="../assets/icons.svg#medal"/></svg><div><strong data-i18n="r1.event">Турнир «Golden Star» · Россия</strong><em>Nehir N. · 2026</em></div><b data-i18n="r1.place">2 место</b></li>
+            <li class="aw aw--final"><svg class="aw__icon"><use href="../assets/icons.svg#trophy"/></svg><div><strong data-i18n="r2.event">Первенство Турции среди юниоров (Ümitler) · Анкара</strong><em>Nehir N. · <span data-i18n="r2.note">представляла Самсун</span> · 03.2026</em></div><b data-i18n="r2.place">Финал</b></li>
+            <li class="aw aw--gold"><svg class="aw__icon"><use href="../assets/icons.svg#medal"/></svg><div><strong data-i18n="r3.event">Первенство провинции Самсун</strong><em>Azra Y. · 04.2026</em></div><b data-i18n="r3.place">1 место</b></li>
+            <li class="aw aw--bronze"><svg class="aw__icon"><use href="../assets/icons.svg#medal"/></svg><div><strong data-i18n="r4.event">Кубок Измира · Измир</strong><em>Feyza G. · 02.2026</em></div><b data-i18n="r4.place">3 место</b></li>
+            <li class="aw aw--silver"><svg class="aw__icon"><use href="../assets/icons.svg#medal"/></svg><div><strong data-i18n="r5.event">Кубок Sportoto · Анкара</strong><em>Ezgi K. · 05.2026</em></div><b data-i18n="r5.place">2 место</b></li>
+            <li class="aw aw--test"><svg class="aw__icon"><use href="../assets/icons.svg#seal"/></svg><div><strong data-i18n="r6.event">Тест федерации Basic Novice 2 · Анкара</strong><em>Nehir N. · <span data-i18n="r6.note">с первой попытки</span> · 10.2026</em></div><b data-i18n="r6.place">Сдан</b></li>
+          </ul>
+          <div class="firsts" data-reveal>
+            <p class="firsts__title" data-i18n="m.title">Первые прыжки этого сезона</p>
+            <dl>
+              <div><dt>1A</dt><dd><span>×4</span> <span data-i18n="m.axel">Аксель</span></dd></div>
+              <div><dt>2S</dt><dd><span>×3</span> <span data-i18n="m.2s">Двойной сальхов</span></dd></div>
+              <div><dt>2A</dt><dd><span>×1</span> <span data-i18n="m.2a">Двойной аксель</span></dd></div>
+            </dl>
+            <p class="firsts__note" data-i18n="m.note">Фейза прыгнула аксель на 5-м месяце занятий в школе.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stories" id="stories">
+      <div class="section-head section-head--row" data-reveal>
+        <div>
+          <p class="eyebrow" data-i18n="stories.eyebrow">Со льда</p>
+          <h2 data-i18n="stories.title">Кадры с тренировок.</h2>
+          <p class="lead"><span data-i18n="stories.lead">Новые видео в Instagram каждую неделю. Нажмите на карточку, чтобы посмотреть.</span> <a data-ig class="link"><svg class="ico"><use href="../assets/icons.svg#ig"/></svg>@goldenskate.samsun</a></p>
+        </div>
+        <div class="rail-ctrl">
+          <button type="button" class="rail-btn" data-rail-prev aria-label="Назад" data-i18n-aria="stories.prev"><svg><use href="../assets/icons.svg#arrow-l"/></svg></button>
+          <button type="button" class="rail-btn" data-rail-next aria-label="Далее" data-i18n-aria="stories.next"><svg><use href="../assets/icons.svg#arrow-r"/></svg></button>
+        </div>
+      </div>
+      <div class="rail-wrap">
+        <div class="rail" data-stories></div>
+      </div>
+      <div class="rail-progress" aria-hidden="true"><i data-rail-progress></i></div>
+    </section>
+
+    <section class="groups" id="groups">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow" data-i18n="pricing.eyebrow">Группы и стоимость</p>
+        <h2 data-i18n="pricing.title">Две группы, одна система.</h2>
+        <p class="lead" data-i18n="pricing.lead">Уровень ребёнка определим вместе на первом занятии. Пробное занятие — бесплатно.</p>
+      </div>
+      <div class="plans">
+        <article class="plan" data-reveal>
+          <h3 data-i18n="p1.name">Начинающие</h3>
+          <p class="plan__who" data-i18n="p1.who">Впервые на льду · 3–10 лет</p>
+          <p class="plan__price"><span data-i18n="p1.price">4 500 ₺</span> <small data-i18n="p1.per">/ мес</small></p>
+          <ul><li data-i18n="p1.i1">2 тренировки на льду в неделю</li><li data-i18n="p1.i2">1 хореография и ОФП в неделю</li><li data-i18n="p1.i3">Равновесие, падать и вставать, первое скольжение</li><li data-i18n="p1.i4">Небольшие группы</li></ul>
+          <a class="btn btn--line" href="#contact" data-i18n="pricing.choose">Записаться в группу</a>
+        </article>
+        <article class="plan plan--pro" data-reveal>
+          <p class="plan__badge" data-i18n="pricing.badge">Для спортсменов</p>
+          <h3 data-i18n="p2.name">Спортивная</h3>
+          <p class="plan__who" data-i18n="p2.who">Подготовка к тестам и соревнованиям</p>
+          <p class="plan__price"><span data-i18n="p2.price">8 500 ₺</span> <small data-i18n="p2.per">/ мес</small></p>
+          <ul><li data-i18n="p2.i1">4–5 тренировок на льду в неделю</li><li data-i18n="p2.i2">ОФП, хореография и постановка</li><li data-i18n="p2.i3">Тесты федерации и соревновательная программа</li><li data-i18n="p2.i4">Сборы в России и Турции</li></ul>
+          <a class="btn btn--gold" href="#contact" data-i18n="pricing.choose">Записаться в группу</a>
+        </article>
+      </div>
+      <p class="groups__note" data-i18n="pricing.note">Стоимость индивидуальных занятий уточняйте в WhatsApp.</p>
+    </section>
+
+    <section class="camps">
+      <div class="camps__img" data-reveal><img src="../assets/img/spin.webp" alt="" loading="lazy" width="1536" height="1024"></div>
+      <div class="camps__body" data-reveal>
+        <p class="eyebrow" data-i18n="camps.eyebrow">Сборы и гости</p>
+        <h2 data-i18n="camps.title">Сезон — это не только каток.</h2>
+        <div class="camps__list">
+          <div><h3 data-i18n="camp1.t">Летние сборы в Самсуне</h3><p data-i18n="camp1.d">11 тренировочных дней: каждый день 2 часа льда и 2 часа ОФП с тремя тренерами.</p></div>
+          <div><h3 data-i18n="camp2.t">Сборы в России · Лыткарино</h3><p data-i18n="camp2.d">Две недели льда в Подмосковье в августе и совместные тренировки с российскими спортсменами.</p></div>
+          <div><h3 data-i18n="camp3.t">Приглашённые тренеры</h3><p data-i18n="camp3.d">В Самсуне проводили мастер-классы Артемий Бужор и Арина Бескова.</p></div>
+        </div>
+        <p class="camps__next" data-i18n="camps.next">Открыта предварительная запись на лето 2027.</p>
+      </div>
+    </section>
+  </div>
+
+  <section class="place" id="place">
+    <div class="place__map" data-map="dark" role="img" aria-label="Buz Sporları Salonu, İlkadım / Samsun"></div>
+    <div class="place__card">
+      <p class="eyebrow" data-i18n="place.eyebrow">Где мы</p>
+      <h2 data-i18n="place.title">Ледовый дворец Самсуна, Илкадым.</h2>
+      <p data-i18n="place.club">На базе Samsun Buz Okulu Spor Kulübü</p>
+      <p class="place__addr" data-i18n="place.addr">Buz Sporları Salonu, İlkadım / Samsun</p>
+      <p class="place__hours" data-i18n="place.hours">Время тренировок зависит от группы</p>
+      <a class="btn btn--line" data-route href="#" data-i18n="place.route">Построить маршрут</a>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="contact__intro" data-reveal>
+      <p class="eyebrow" data-i18n="contact.eyebrow">Запись</p>
+      <h2 data-i18n="contact.title">Запишитесь на пробное занятие.</h2>
+      <p class="lead" data-i18n="contact.lead">Оставьте заявку — в течение дня свяжемся с вами и подберём время пробного занятия.</p>
+      <p class="contact__or" data-i18n="contact.or">или напрямую</p>
+      <div class="contact__direct">
+        <a data-wa target="_blank" rel="noopener" href="#"><svg class="ico"><use href="../assets/icons.svg#wa"/></svg>+90 533 518 32 01</a>
+        <a data-ig href="#"><svg class="ico"><use href="../assets/icons.svg#ig"/></svg>@goldenskate.samsun</a>
+      </div>
+    </div>
+    <div class="form-wrap" data-reveal>
+    <form class="form" data-form novalidate>
+      <label><span data-i18n="form.name">Имя родителя</span><input name="name" autocomplete="name" required></label>
+      <label><span data-i18n="form.phone">Телефон</span><input name="phone" type="tel" autocomplete="tel" inputmode="tel" required></label>
+      <div class="form__row">
+        <label><span data-i18n="form.age">Возраст ребёнка</span><input name="age" type="number" min="2" max="18" inputmode="numeric"></label>
+        <label><span data-i18n="form.group">Группа</span>
+          <select name="group">
+            <option value="beg" data-i18n="form.g.beg">Начинающие</option>
+            <option value="pro" data-i18n="form.g.pro">Спортивная</option>
+            <option value="unsure" data-i18n="form.g.unsure">Пока не знаю</option>
+          </select>
+        </label>
+      </div>
+      <label><span data-i18n="form.msg">Комментарий (необязательно)</span><textarea name="note" rows="3"></textarea></label>
+      <p class="form__error" data-form-error hidden role="alert"></p>
+      <button class="btn btn--gold" type="submit" data-i18n="form.submit">Записаться</button>
+    </form>
+    <div class="form form--ok" data-form-ok hidden tabindex="-1" role="status">
+      <svg class="form__ok-icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M15 24.5l6 6 12-13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <h3 data-i18n="form.ok.t">Заявка принята</h3>
+      <p data-i18n="form.ok.d">Спасибо! Мы свяжемся с вами в ближайшее время.</p>
+      <button class="btn btn--line" type="button" data-form-again data-i18n="form.ok.again">Новая заявка</button>
+    </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <span data-i18n="footer.rights">© 2026 GoldenSkate Самсун · школа фигурного катания</span>
+  <span data-i18n="footer.net">Часть сети школ «Golden Star»</span>
+  <span class="foot__social">
+    <a data-wa target="_blank" rel="noopener" href="#" aria-label="WhatsApp"><svg><use href="../assets/icons.svg#wa"/></svg></a>
+    <a data-ig href="#" aria-label="Instagram"><svg><use href="../assets/icons.svg#ig"/></svg></a>
+  </span>
+</footer>
+
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js" defer></script>
+<script src="../assets/i18n.js?v=19" defer></script>
+<script src="../assets/app.js?v=19" defer></script>
+<script src="../assets/tracing.js?v=19" defer></script>
+</body>
+</html>
