@@ -1,27 +1,58 @@
 <!doctype html>
-<html lang="tr">
+<html lang="ru">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GoldenSkate — Samsun</title>
-<meta name="description" content="GoldenSkate — Samsun'da çocuklar için artistik patinaj okulu. Site yakında.">
+<title>GoldenSkate — варианты лендинга</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="c/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Unbounded:wght@700&family=Old+Standard+TT:ital@1&family=Onest:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root { color-scheme: light dark; }
-  html, body { height: 100%; margin: 0; }
-  body {
-    display: grid; place-items: center; text-align: center; padding: 16px;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    background: #0f1729; color: #f4efe1;
-  }
-  h1 { font-size: clamp(2rem, 7vw, 3.5rem); margin: 0 0 .5rem; color: #e6c068; letter-spacing: .02em; }
-  p { margin: .25rem 0; opacity: .85; }
+  :root { --bg: #eef2f5; --fg: #0e1f2c; --mute: #5b6d7a; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 400 16px/1.55 'Onest', system-ui, sans-serif; }
+  main { max-width: 1180px; margin: 0 auto; padding: clamp(32px, 6vw, 72px) 16px 64px; }
+  h1 { font: 500 clamp(28px, 4vw, 44px)/1.1 'Onest', sans-serif; margin: 0 0 10px; letter-spacing: -.02em; }
+  .sub { color: var(--mute); max-width: 60ch; margin: 0 0 40px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  a.card { display: flex; flex-direction: column; text-decoration: none; color: inherit; border-radius: 22px; overflow: hidden; background: #fff; border: 1px solid #d5dee5; transition: transform .25s, box-shadow .25s; }
+  a.card:hover { transform: translateY(-3px); box-shadow: 0 20px 50px -24px rgba(14,31,44,.35); }
+  .swatch { height: 220px; display: grid; place-items: center; position: relative; }
+  .swatch span { font-size: 44px; }
+  .a .swatch { background: radial-gradient(ellipse at 40% 30%, #12505a, #061a20 70%); color: #f0d9a6; font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; }
+  .b .swatch { background: #f2f6f8; color: #0e1f2c; font-family: 'Unbounded', sans-serif; border-bottom: 1px solid #d5dee5; }
+  .b .swatch::after { content: ''; position: absolute; left: 0; right: 0; top: 50%; height: 2px; background: #c8323b; opacity: .7; }
+  .b .swatch span { position: relative; z-index: 1; background: #f2f6f8; padding: 0 12px; font-size: 34px; }
+  .c .swatch { background: radial-gradient(ellipse at 50% 20%, #1a3466, #0b1a3a 65%); color: #e8d4a3; font-family: 'Old Standard TT', serif; font-style: italic; }
+  .dots { position: absolute; bottom: 14px; left: 16px; display: flex; gap: 6px; }
+  .dots i { width: 16px; height: 16px; border-radius: 50%; border: 1px solid rgba(255,255,255,.4); }
+  .body { padding: 20px 22px 24px; }
+  .body h2 { margin: 0 0 6px; font: 500 20px/1.2 'Onest', sans-serif; }
+  .body p { margin: 0; color: var(--mute); font-size: 15px; }
+  .go { margin-top: 14px !important; color: var(--fg) !important; font-weight: 500; }
+  @media (max-width: 860px) { .grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
-  <main>
-    <h1>GoldenSkate</h1>
-    <p>Site yakında · Сайт скоро откроется · Site coming soon</p>
-    <p>Samsun</p>
-  </main>
+<main>
+  <h1>GoldenSkate Samsun — три варианта лендинга</h1>
+  <p class="sub">Один контент, три визуальных направления. Язык выбирается по языку браузера (по умолчанию турецкий), переключатель TR / RU / EN в шапке.</p>
+  <div class="grid">
+    <a class="card a" href="a/">
+      <div class="swatch"><span>Лёд и золото</span><div class="dots"><i style="background:#061a20"></i><i style="background:#0e3a44"></i><i style="background:#8fc3c6"></i><i style="background:#d6b26e"></i></div></div>
+      <div class="body"><h2>A · Лёд и золото</h2><p>Кинематографичный тёмный петроль из видео, шампань-золото. Видео на весь экран, золотая линия-след конька прорисовывается при прокрутке.</p><p class="go">Открыть →</p></div>
+    </a>
+    <a class="card b" href="b/">
+      <div class="swatch"><span>PROTOKOL</span><div class="dots"><i style="background:#f2f6f8;border-color:#cfdbe2"></i><i style="background:#0e1f2c"></i><i style="background:#b7862c"></i><i style="background:#c8323b"></i></div></div>
+      <div class="body"><h2>B · Протокол</h2><p>Светлый «белый лёд» как на их катке. Видео в форме катка, коды элементов из судейского протокола, таблица результатов, лестница уровней.</p><p class="go">Открыть →</p></div>
+    </a>
+    <a class="card c" href="c/">
+      <div class="swatch"><span>Gala</span><div class="dots"><i style="background:#0b1a3a"></i><i style="background:#e3ebf3"></i><i style="background:#e8d4a3"></i><i style="background:#a9833a"></i></div></div>
+      <div class="body"><h2>C · Гала</h2><p>Их фирменные navy и золото, русская книжная типографика. Сквозной мотив — арка балетного зала, герб-печать, тарифы как билеты.</p><p class="go">Открыть →</p></div>
+    </a>
+  </div>
+</main>
 </body>
 </html>

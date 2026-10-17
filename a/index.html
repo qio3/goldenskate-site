@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="tr" data-assets="../assets/">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GoldenSkate Samsun — Rus ekolü artistik buz pateni okulu</title>
+<meta name="description" content="Samsun’da çocuklar için artistik buz pateni. Rusya’dan antrenörler, buz + bale + kara antrenmanı tek programda.">
+<meta name="theme-color" content="#061a20">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="style.css?v=3">
+</head>
+<body>
+
+<header class="top" data-top>
+  <a class="brand" href="#top" aria-label="GoldenSkate Samsun">
+    <svg class="brand__mark" viewBox="0 0 64 24" aria-hidden="true">
+      <path d="M9 15.5C22 20.5 44 20.5 60 12.5C46 15 24 15 11 11.2" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M11 11.2L7.6 11.6L9.4 13.1L5.8 13.6L8.2 15L4.6 15.6L9 15.5" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/>
+    </svg>
+    <span class="brand__word">Golden Skate<small>Samsun</small></span>
+  </a>
+  <nav class="nav" data-nav aria-label="Primary">
+    <a href="#school" data-i18n="nav.method">Okul</a>
+    <a href="#coaches" data-i18n="nav.coaches">Antrenörler</a>
+    <a href="#results" data-i18n="nav.results">Başarılar</a>
+    <a href="#stories" data-i18n="nav.stories">Videolar</a>
+    <a href="#groups" data-i18n="nav.pricing">Gruplar</a>
+    <a href="#contact" data-i18n="nav.contact">İletişim</a>
+  </nav>
+  <div class="top__end">
+    <div class="langs" role="group" data-i18n-aria="lang.label" aria-label="Dil">
+      <button type="button" data-lang="tr">TR</button><button type="button" data-lang="ru">RU</button><button type="button" data-lang="en">EN</button>
+    </div>
+    <a class="btn btn--ghost top__cta" href="#contact" data-i18n="cta.trial">Ücretsiz deneme dersi</a>
+    <button class="burger" type="button" data-nav-toggle aria-expanded="false" data-i18n-aria="nav.menu" aria-label="Menü"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <video class="hero__video" data-hero autoplay muted loop playsinline preload="auto" poster="../assets/img/poster-teal.webp">
+      <source src="../assets/video/hero-teal.mp4" type="video/mp4">
+    </video>
+    <div class="hero__shade"></div>
+    <div class="hero__inner">
+      <p class="eyebrow" data-i18n="hero.eyebrow">Samsun · Rus ekolü artistik patinaj okulu</p>
+      <h1 class="hero__title" data-i18n="hero.title">Buzda ilk adımdan<br>ilk aksele.</h1>
+      <svg class="hero__trace" viewBox="0 0 600 40" aria-hidden="true"><path d="M2 30C120 34 210 6 300 18S470 40 520 20C548 9 560 30 540 32C520 34 528 12 598 10" pathLength="1"/></svg>
+      <p class="hero__sub" data-i18n="hero.sub">Rusya’dan gelen antrenörler, 3 yaşından itibaren çocuklar için buz, bale ve kara antrenmanını tek programda birleştiriyor.</p>
+      <div class="hero__ctas">
+        <a class="btn btn--gold" href="#contact" data-i18n="cta.trial">Ücretsiz deneme dersi</a>
+        <a class="btn btn--line" data-wa target="_blank" rel="noopener" href="#"><span data-i18n="cta.wa">WhatsApp’tan yazın</span></a>
+      </div>
+    </div>
+    <ul class="hero__facts">
+      <li data-i18n="hero.f1">Ekim 2025’ten beri Samsun’da</li>
+      <li data-i18n="hero.f2">3 yaşından itibaren</li>
+      <li data-i18n="hero.f3">Rusya’dan antrenörler</li>
+    </ul>
+  </section>
+
+  <div class="flow">
+    <svg class="tracing" data-tracing aria-hidden="true"><path/></svg>
+
+    <section class="school" id="school">
+      <div class="school__head" data-reveal>
+        <p class="eyebrow" data-i18n="method.eyebrow">Rus ekolü</p>
+        <h2 data-i18n="method.title">Güzel kayış, sağlam temelden başlar.</h2>
+        <p class="lead" data-i18n="method.lead"></p>
+        <p class="school__one" data-i18n="method.one">Üçü de tek kulüpte, tek kayıtla.</p>
+      </div>
+      <div class="school__list">
+        <article class="pillar" data-reveal>
+          <img src="../assets/img/m-ice.webp" alt="" loading="lazy" width="720" height="1040">
+          <div><h3 data-i18n="method.ice.t">Buz</h3><p data-i18n="method.ice.d"></p></div>
+        </article>
+        <article class="pillar" data-reveal>
+          <img src="../assets/img/m-ballet.webp" alt="" loading="lazy" width="480" height="470">
+          <div><h3 data-i18n="method.ballet.t">Bale ve koreografi</h3><p data-i18n="method.ballet.d"></p></div>
+        </article>
+        <article class="pillar" data-reveal>
+          <img src="../assets/img/m-office.webp" alt="" loading="lazy" width="720" height="1040">
+          <div><h3 data-i18n="method.off.t">Kara antrenmanı</h3><p data-i18n="method.off.d"></p></div>
+        </article>
+      </div>
+      <aside class="founder" data-reveal>
+        <img src="../assets/img/coach-olga.webp" alt="Olga Tikhankina" loading="lazy" width="900" height="1350">
+        <div>
+          <p class="eyebrow" data-i18n="founder.label">Kurucu</p>
+          <p class="founder__name">Olga Tikhankina</p>
+          <p data-i18n="founder.text"></p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="coaches" id="coaches">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow" data-i18n="coaches.eyebrow">Antrenörler</p>
+        <h2 data-i18n="coaches.title">Rus ekolünü Samsun’a getiren ekip.</h2>
+        <p class="lead" data-i18n="coaches.lead"></p>
+      </div>
+      <div class="coaches__grid">
+        <article class="coach" data-reveal>
+          <figure><img src="../assets/img/coach-daniil.webp" alt="Daniil Averkiev" loading="lazy" width="900" height="1350"></figure>
+          <p class="coach__rank" data-i18n="coach.daniil.rank">Spor Ustası</p>
+          <h3>Daniil Averkiev</h3>
+          <p class="coach__role" data-i18n="coach.daniil.role"></p>
+          <p class="coach__bio" data-i18n="coach.daniil.bio"></p>
+        </article>
+        <article class="coach" data-reveal>
+          <figure><img src="../assets/img/coach-alina.webp" alt="Alina Shafranova" loading="lazy" width="900" height="1350"></figure>
+          <p class="coach__rank" data-i18n="coach.alina.rank">Spor Ustası Adayı</p>
+          <h3>Alina Shafranova</h3>
+          <p class="coach__role" data-i18n="coach.alina.role"></p>
+          <p class="coach__bio" data-i18n="coach.alina.bio"></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="results" id="results">
+      <div class="results__media" data-reveal>
+        <img src="../assets/img/medal.webp" alt="" loading="lazy" width="1536" height="1024">
+        <img class="results__photo" src="../assets/img/r-podium.webp" alt="" loading="lazy" width="720" height="950">
+      </div>
+      <div class="results__body">
+        <div data-reveal>
+          <p class="eyebrow" data-i18n="results.eyebrow">Başarılar</p>
+          <h2 data-i18n="results.title">İlk sezonun sonuçları.</h2>
+          <p class="lead" data-i18n="results.lead"></p>
+        </div>
+        <ol class="podium" data-reveal>
+          <li><b class="medal medal--2" data-i18n="r1.place">2.</b><span><strong data-i18n="r1.event"></strong><em>Nehir N. · 2026</em></span></li>
+          <li><b class="medal medal--f" data-i18n="r2.place">Finalist</b><span><strong data-i18n="r2.event"></strong><em>Nehir N. · <span data-i18n="r2.note"></span> · 03.2026</em></span></li>
+          <li><b class="medal medal--1" data-i18n="r3.place">1.</b><span><strong data-i18n="r3.event"></strong><em>Azra Y. · 04.2026</em></span></li>
+          <li><b class="medal medal--3" data-i18n="r4.place">3.</b><span><strong data-i18n="r4.event"></strong><em>Feyza G. · 02.2026</em></span></li>
+          <li><b class="medal medal--2" data-i18n="r5.place">2.</b><span><strong data-i18n="r5.event"></strong><em>Ezgi K. · 05.2026</em></span></li>
+          <li><b class="medal medal--t" data-i18n="r6.place">Geçti</b><span><strong data-i18n="r6.event"></strong><em>Nehir N. · <span data-i18n="r6.note"></span> · 10.2026</em></span></li>
+        </ol>
+        <div class="firsts" data-reveal>
+          <p class="firsts__title" data-i18n="m.title">Bu sezon yapılan ilk atlayışlar</p>
+          <dl>
+            <div><dt>1A</dt><dd><span>×4</span> <span data-i18n="m.axel">Aksel</span></dd></div>
+            <div><dt>2S</dt><dd><span>×3</span> <span data-i18n="m.2s">Çift salchow</span></dd></div>
+            <div><dt>2A</dt><dd><span>×1</span> <span data-i18n="m.2a">Çift aksel</span></dd></div>
+          </dl>
+          <p class="firsts__note" data-i18n="m.note"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="stories" id="stories">
+      <div class="section-head section-head--row" data-reveal>
+        <div>
+          <p class="eyebrow" data-i18n="stories.eyebrow">Buzdan</p>
+          <h2 data-i18n="stories.title">Antrenmanlardan kareler.</h2>
+        </div>
+        <p class="lead"><span data-i18n="stories.lead"></span> <a data-ig class="link">@goldenskate.samsun ↗</a></p>
+      </div>
+      <div class="rail" data-stories></div>
+    </section>
+
+    <section class="groups" id="groups">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow" data-i18n="pricing.eyebrow">Gruplar ve ücretler</p>
+        <h2 data-i18n="pricing.title">İki grup, tek sistem.</h2>
+        <p class="lead" data-i18n="pricing.lead"></p>
+      </div>
+      <div class="plans">
+        <article class="plan" data-reveal>
+          <h3 data-i18n="p1.name">Başlangıç</h3>
+          <p class="plan__who" data-i18n="p1.who"></p>
+          <p class="plan__price"><span data-i18n="p1.price">4 500 ₺</span> <small data-i18n="p1.per">/ ay</small></p>
+          <ul><li data-i18n="p1.i1"></li><li data-i18n="p1.i2"></li><li data-i18n="p1.i3"></li><li data-i18n="p1.i4"></li></ul>
+          <a class="btn btn--line" href="#contact" data-i18n="pricing.choose">Bu gruba yazılın</a>
+        </article>
+        <article class="plan plan--pro" data-reveal>
+          <p class="plan__badge" data-i18n="pricing.badge">Sporcular için</p>
+          <h3 data-i18n="p2.name">Sportif</h3>
+          <p class="plan__who" data-i18n="p2.who"></p>
+          <p class="plan__price"><span data-i18n="p2.price">8 500 ₺</span> <small data-i18n="p2.per">/ ay</small></p>
+          <ul><li data-i18n="p2.i1"></li><li data-i18n="p2.i2"></li><li data-i18n="p2.i3"></li><li data-i18n="p2.i4"></li></ul>
+          <a class="btn btn--gold" href="#contact" data-i18n="pricing.choose">Bu gruba yazılın</a>
+        </article>
+      </div>
+      <p class="groups__note" data-i18n="pricing.note"></p>
+    </section>
+
+    <section class="camps">
+      <div class="camps__img" data-reveal><img src="../assets/img/spin.webp" alt="" loading="lazy" width="1536" height="1024"></div>
+      <div class="camps__body" data-reveal>
+        <p class="eyebrow" data-i18n="camps.eyebrow">Kamplar ve misafirler</p>
+        <h2 data-i18n="camps.title">Sezon sadece salonda geçmiyor.</h2>
+        <div class="camps__list">
+          <div><h3 data-i18n="camp1.t"></h3><p data-i18n="camp1.d"></p></div>
+          <div><h3 data-i18n="camp2.t"></h3><p data-i18n="camp2.d"></p></div>
+          <div><h3 data-i18n="camp3.t"></h3><p data-i18n="camp3.d"></p></div>
+        </div>
+        <p class="camps__next" data-i18n="camps.next"></p>
+      </div>
+    </section>
+  </div>
+
+  <section class="place" id="place">
+    <div class="place__map" data-map="dark" role="img" aria-label="Buz Sporları Salonu, İlkadım / Samsun"></div>
+    <div class="place__card">
+      <p class="eyebrow" data-i18n="place.eyebrow">Nerede</p>
+      <h2 data-i18n="place.title">Samsun Buz Sporları Salonu, İlkadım.</h2>
+      <p data-i18n="place.club"></p>
+      <p class="place__addr" data-i18n="place.addr"></p>
+      <p class="place__hours" data-i18n="place.hours"></p>
+      <a class="btn btn--line" data-route href="#" data-i18n="place.route">Yol tarifi al</a>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="contact__intro" data-reveal>
+      <p class="eyebrow" data-i18n="contact.eyebrow">Kayıt</p>
+      <h2 data-i18n="contact.title">Deneme dersine yazılın.</h2>
+      <p class="lead" data-i18n="contact.lead"></p>
+      <p class="contact__or" data-i18n="contact.or">veya doğrudan</p>
+      <div class="contact__direct">
+        <a data-wa target="_blank" rel="noopener" href="#">WhatsApp · +90 533 518 32 01</a>
+        <a data-ig href="#">Instagram · @goldenskate.samsun</a>
+      </div>
+    </div>
+    <form class="form" data-wa-form novalidate data-reveal>
+      <label><span data-i18n="form.name">Veli adı</span><input name="name" autocomplete="name" required></label>
+      <label><span data-i18n="form.phone">Telefon</span><input name="phone" type="tel" autocomplete="tel" inputmode="tel" required></label>
+      <div class="form__row">
+        <label><span data-i18n="form.age">Çocuğun yaşı</span><input name="age" type="number" min="2" max="18" inputmode="numeric"></label>
+        <label><span data-i18n="form.group">Grup</span>
+          <select name="group">
+            <option value="beg" data-i18n="form.g.beg">Başlangıç</option>
+            <option value="pro" data-i18n="form.g.pro">Sportif</option>
+            <option value="unsure" data-i18n="form.g.unsure">Emin değilim</option>
+          </select>
+        </label>
+      </div>
+      <label><span data-i18n="form.msg">Not (isteğe bağlı)</span><textarea name="note" rows="3"></textarea></label>
+      <p class="form__error" data-form-error hidden role="alert"></p>
+      <button class="btn btn--gold" type="submit" data-i18n="form.submit">WhatsApp’ta gönder</button>
+    </form>
+  </section>
+</main>
+
+<footer class="foot">
+  <span data-i18n="footer.rights">© 2026 GoldenSkate Samsun</span>
+  <span data-i18n="footer.net"></span>
+  <a href="../">A · B · C</a>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" defer></script>
+<script src="../assets/app.js?v=3" defer></script>
+<script src="tracing.js?v=3" defer></script>
+</body>
+</html>
