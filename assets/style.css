@@ -35,7 +35,7 @@ p { margin: 0; }
 .btn--gold:hover { background: var(--gold-2); }
 .btn--line { border-color: rgba(240, 217, 166, .55); color: var(--gold-2); background: rgba(6, 26, 32, .25); }
 .btn--line:hover { border-color: var(--gold-2); background: rgba(240, 217, 166, .08); }
-.btn--ghost { border-color: var(--line); color: var(--frost); min-height: 40px; height: 40px; padding: 0 18px; font-size: 14px; }
+.btn--ghost { border-color: var(--line); color: var(--frost); min-height: 40px; height: 40px; padding: 0 18px; font-size: 14px; white-space: nowrap; flex: none; }
 .btn--ghost:hover { border-color: var(--gold); color: var(--gold-2); }
 .icon-btn { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); color: var(--gold); flex: none; transition: border-color .25s, color .25s; }
 .icon-btn svg { width: 18px; height: 18px; }
@@ -47,14 +47,14 @@ p { margin: 0; }
 .top::before { content: ''; position: absolute; inset: -120px 0 0; z-index: -1; background: rgba(6, 26, 32, .86); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); opacity: 0; transition: opacity .4s; }
 /* a solid colour on the header itself lets Safari 26 tint the top bar to match */
 .top.is-solid { padding-top: calc(10px + env(safe-area-inset-top)); padding-bottom: 10px; background-color: rgba(6, 26, 32, .94); }
-.nav__langs { display: none; }
+.nav .nav__langs { display: none; }
 .top.is-solid::before { opacity: 1; }
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--gold); flex: none; }
 .brand__mark { width: 44px; height: 18px; }
 .brand__word { font: 500 17px/1 var(--serif); letter-spacing: .26em; text-transform: uppercase; color: var(--frost); display: flex; flex-direction: column; gap: 5px; white-space: nowrap; }
 .brand__word small { font: 500 9px/1 var(--sans); letter-spacing: .42em; color: var(--gold); }
-.nav { display: flex; gap: 26px; margin-left: auto; }
-.nav a { font-size: 14px; text-decoration: none; color: var(--frost); opacity: .78; transition: opacity .2s, color .2s; }
+.nav { display: flex; gap: clamp(16px, 1.8vw, 26px); margin-left: auto; }
+.nav a { font-size: 14px; white-space: nowrap; text-decoration: none; color: var(--frost); opacity: .78; transition: opacity .2s, color .2s; }
 .nav a:hover { opacity: 1; color: var(--gold-2); }
 .top__end { display: flex; align-items: center; gap: 12px; }
 .langs { display: flex; align-items: center; height: 40px; border: 1px solid var(--line); border-radius: 99px; padding: 3px; }
@@ -235,8 +235,6 @@ section { position: relative; }
 /* responsive */
 @media (max-width: 1180px) {
   .tracing { display: none; }
-}
-@media (max-width: 1100px) {
   .nav { position: fixed; inset: 0; z-index: -1; flex-direction: column; justify-content: center; align-items: center; gap: 22px; margin: 0; background: rgba(6,26,32,.98); opacity: 0; visibility: hidden; transition: opacity .3s, visibility .3s; }
   .nav a { font: 300 34px/1.1 var(--serif); opacity: 1; }
   .nav-open .nav { opacity: 1; visibility: visible; }
@@ -266,7 +264,7 @@ section { position: relative; }
   .top { gap: 10px; padding: calc(10px + env(safe-area-inset-top)) 16px 10px; }
   .top.is-solid { padding-top: calc(8px + env(safe-area-inset-top)); padding-bottom: 8px; }
   .top__end > .langs { display: none; }
-  .nav__langs { display: flex; margin-top: 18px; height: 48px; }
+  .nav .nav__langs { display: flex; margin-top: 18px; height: 48px; }
   .nav .nav__langs a { height: 40px; padding: 0 16px; font: 500 14px/1 var(--sans); letter-spacing: .08em; opacity: 1; }
   .brand { gap: 8px; }
   .brand__word { font-size: 13px; letter-spacing: .18em; }
