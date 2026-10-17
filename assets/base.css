@@ -45,6 +45,6 @@ html.viewer-open { overflow: hidden; }
 @media (max-width: 560px) { .viewer__frame { height: 100svh; border-radius: 0; } }
 
 /* map */
-.leaflet-container { font: inherit; background: var(--v-bg, #0b2a33); }
+.map-pin { position: relative; width: 28px; height: 28px; }
 .map-pin span { position: absolute; inset: 0; border-radius: 50%; background: var(--v-accent, #d6b26e); box-shadow: 0 0 0 6px color-mix(in srgb, var(--v-accent, #d6b26e) 30%, transparent), 0 0 0 14px color-mix(in srgb, var(--v-accent, #d6b26e) 12%, transparent); }
 .map-pin span::after { content: ''; position: absolute; inset: 9px; border-radius: 50%; background: var(--v-bg, #061a20); }

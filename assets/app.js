@@ -508,16 +508,89 @@
     });
   });
 
-  /* ---------- map ---------- */
+  /* ---------- map: MapLibre + OpenFreeMap vector tiles, every layer recoloured from the page's --map-* tokens ---------- */
   function initMap() {
     var el = document.querySelector('[data-map]');
-    if (!el || !window.L) return;
-    // Standard OSM tiles; each variant recolours them with a CSS filter on .map-base
-    var map = L.map(el, { scrollWheelZoom: false, zoomControl: true, attributionControl: true }).setView([RINK.lat, RINK.lng], 15);
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, className: 'map-base',
-      attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>' }).addTo(map);
-    var icon = L.divIcon({ className: 'map-pin', html: '<span></span>', iconSize: [28, 28], iconAnchor: [14, 14] });
-    L.marker([RINK.lat, RINK.lng], { icon: icon, keyboard: false }).addTo(map);
+    if (!el || !window.maplibregl) return;
+    var cs = getComputedStyle(root);
+    var c = function (k, d) { return cs.getPropertyValue(k).trim() || d; };
+    var pal = {
+      bg: c('--map-bg', '#082229'), water: c('--map-water', '#0c3a45'), park: c('--map-park', '#0b2d2a'),
+      building: c('--map-building', '#0d313a'), road: c('--map-road', 'rgba(232,242,241,.16)'),
+      major: c('--map-road-major', 'rgba(214,178,110,.34)'), label: c('--map-label', '#8fb0b2'), halo: c('--map-halo', '#061a20')
+    };
+    var map = new maplibregl.Map({
+      container: el, style: 'https://tiles.openfreemap.org/styles/positron',
+      center: [RINK.lng, RINK.lat], zoom: 14.6, attributionControl: { compact: true }, cooperativeGestures: true
+    });
+    map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');
+    map.on('style.load', function () {
+      map.getStyle().layers.forEach(function (l) {
+        var id = l.id, set = function (p, v) { try { map.setPaintProperty(id, p, v); } catch (e) {} };
+        if (l.type === 'background') set('background-color', pal.bg);
+        else if (l.type === 'fill') {
+          if (/water/.test(id)) set('fill-color', pal.water);
+          else if (/building|aeroway/.test(id)) set('fill-color', pal.building);
+          else set('fill-color', pal.park);
+        } else if (l.type === 'line') {
+          if (/boundary|railway/.test(id)) map.setLayoutProperty(id, 'visibility', 'none');
+          else if (/water/.test(id)) set('line-color', pal.water);
+          else if (/casing/.test(id)) set('line-color', pal.bg);
+          else if (/motorway|major|trunk|primary/.test(id)) set('line-color', pal.major);
+          else set('line-color', pal.road);
+        } else if (l.type === 'symbol') {
+          if (/shield|airport/.test(id)) map.setLayoutProperty(id, 'visibility', 'none');
+          else { set('text-color', pal.label); set('text-halo-color', pal.halo); }
+        }
+      });
+    });
+    var pin = document.createElement('div');
+    pin.className = 'map-pin'; pin.innerHTML = '<span></span>';
+    new maplibregl.Marker({ element: pin }).setLngLat([RINK.lng, RINK.lat]).addTo(map);
+  }
+
+  /* ---------- stories rail: arrows, progress thumb, mouse drag ---------- */
+  function initRail() {
+    var rail = document.querySelector('[data-stories]');
+    if (!rail) return;
+    var wrap = rail.parentElement;
+    var prev = document.querySelector('[data-rail-prev]');
+    var next = document.querySelector('[data-rail-next]');
+    var thumb = document.querySelector('[data-rail-progress]');
+    function step() { var card = rail.querySelector('.story'); return card ? (card.offsetWidth + 18) * 2 : 320; }
+    function update() {
+      var max = rail.scrollWidth - rail.clientWidth;
+      var atEnd = rail.scrollLeft >= max - 4;
+      if (prev) prev.disabled = rail.scrollLeft <= 4;
+      if (next) next.disabled = atEnd;
+      wrap.classList.toggle('at-end', atEnd);
+      if (thumb) {
+        thumb.style.width = Math.min(100, rail.clientWidth / rail.scrollWidth * 100) + '%';
+        thumb.style.transform = 'translateX(' + (rail.scrollLeft / rail.clientWidth * 100) + '%)';
+      }
+    }
+    if (prev) prev.addEventListener('click', function () { rail.scrollBy({ left: -step(), behavior: 'smooth' }); });
+    if (next) next.addEventListener('click', function () { rail.scrollBy({ left: step(), behavior: 'smooth' }); });
+    rail.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    var sx = 0, sl = 0, down = false, moved = false;
+    rail.addEventListener('pointerdown', function (e) {
+      if (e.pointerType !== 'mouse') return;
+      down = true; moved = false; sx = e.clientX; sl = rail.scrollLeft;
+    });
+    window.addEventListener('pointermove', function (e) {
+      if (!down) return;
+      var dx = e.clientX - sx;
+      if (Math.abs(dx) > 6) { moved = true; rail.classList.add('is-dragging'); }
+      if (moved) rail.scrollLeft = sl - dx;
+    });
+    window.addEventListener('pointerup', function () {
+      if (!down) return;
+      down = false; rail.classList.remove('is-dragging');
+    });
+    rail.addEventListener('click', function (e) { if (moved) { e.stopPropagation(); e.preventDefault(); moved = false; } }, true);
+    rail.addEventListener('dragstart', function (e) { e.preventDefault(); });
+    update();
   }
   document.querySelectorAll('[data-route]').forEach(function (a) {
     a.href = 'https://www.google.com/maps/dir/?api=1&destination=' + RINK.lat + ',' + RINK.lng;
@@ -525,6 +598,7 @@
   });
 
   buildStories();
+  initRail();
   apply(detect());
   if (document.readyState === 'complete') initMap(); else window.addEventListener('load', initMap);
 })();
