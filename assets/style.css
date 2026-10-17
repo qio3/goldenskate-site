@@ -213,7 +213,11 @@ section { position: relative; }
 .form { display: grid; gap: 18px; padding: clamp(22px, 3vw, 40px); border-radius: 24px; background: var(--deep); border: 1px solid var(--line); align-self: start; min-width: 0; }
 .form label { display: grid; gap: 8px; font-size: 14px; color: var(--mute); min-width: 0; }
 .form input, .form select, .form textarea { width: 100%; min-width: 0; min-height: 50px; padding: 12px 16px; border-radius: 12px; border: 1px solid var(--line); background: rgba(6,26,32,.6); color: var(--frost); font-size: 16px; }
-.form textarea { resize: vertical; }
+.form textarea { resize: none; height: 104px; }
+.form input[type="number"] { -moz-appearance: textfield; appearance: textfield; }
+.form input[type="number"]::-webkit-inner-spin-button, .form input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+.form select { -webkit-appearance: none; appearance: none; cursor: pointer; padding-right: 48px;
+  background: rgba(6,26,32,.6) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23d6b26e' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 18px center / 12px 8px; }
 .form input:focus, .form select:focus, .form textarea:focus { outline: none; border-color: var(--gold); }
 .form select option { background: var(--deep); }
 .form__row { display: grid; grid-template-columns: 1fr 1.4fr; gap: 14px; }
