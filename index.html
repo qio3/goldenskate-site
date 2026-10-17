@@ -11,8 +11,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
-<link rel="stylesheet" href="assets/base.css?v=13">
-<link rel="stylesheet" href="style.css?v=13">
+<link rel="stylesheet" href="assets/base.css?v=17">
+<link rel="stylesheet" href="style.css?v=17">
 </head>
 <body>
 
@@ -140,11 +140,11 @@
         </figure>
         <div class="results__body">
           <ul class="awards" data-reveal>
-            <li class="aw aw--silver"><svg class="aw__icon"><use href="assets/icons.svg#medal"/></svg><div><strong data-i18n="r1.event"></strong><em>Nehir N. · 2026</em></div><b data-i18n="r1.place">2.</b></li>
+            <li class="aw aw--silver"><svg class="aw__icon"><use href="assets/icons.svg#medal"/></svg><div><strong data-i18n="r1.event"></strong><em>Nehir N. · 2026</em></div><b data-i18n="r1.place">2. yer</b></li>
             <li class="aw aw--final"><svg class="aw__icon"><use href="assets/icons.svg#trophy"/></svg><div><strong data-i18n="r2.event"></strong><em>Nehir N. · <span data-i18n="r2.note"></span> · 03.2026</em></div><b data-i18n="r2.place">Finalist</b></li>
-            <li class="aw aw--gold"><svg class="aw__icon"><use href="assets/icons.svg#medal"/></svg><div><strong data-i18n="r3.event"></strong><em>Azra Y. · 04.2026</em></div><b data-i18n="r3.place">1.</b></li>
-            <li class="aw aw--bronze"><svg class="aw__icon"><use href="assets/icons.svg#medal"/></svg><div><strong data-i18n="r4.event"></strong><em>Feyza G. · 02.2026</em></div><b data-i18n="r4.place">3.</b></li>
-            <li class="aw aw--silver"><svg class="aw__icon"><use href="assets/icons.svg#medal"/></svg><div><strong data-i18n="r5.event"></strong><em>Ezgi K. · 05.2026</em></div><b data-i18n="r5.place">2.</b></li>
+            <li class="aw aw--gold"><svg class="aw__icon"><use href="assets/icons.svg#medal"/></svg><div><strong data-i18n="r3.event"></strong><em>Azra Y. · 04.2026</em></div><b data-i18n="r3.place">1. yer</b></li>
+            <li class="aw aw--bronze"><svg class="aw__icon"><use href="assets/icons.svg#medal"/></svg><div><strong data-i18n="r4.event"></strong><em>Feyza G. · 02.2026</em></div><b data-i18n="r4.place">3. yer</b></li>
+            <li class="aw aw--silver"><svg class="aw__icon"><use href="assets/icons.svg#medal"/></svg><div><strong data-i18n="r5.event"></strong><em>Ezgi K. · 05.2026</em></div><b data-i18n="r5.place">2. yer</b></li>
             <li class="aw aw--test"><svg class="aw__icon"><use href="assets/icons.svg#seal"/></svg><div><strong data-i18n="r6.event"></strong><em>Nehir N. · <span data-i18n="r6.note"></span> · 10.2026</em></div><b data-i18n="r6.place">Geçti</b></li>
           </ul>
           <div class="firsts" data-reveal>
@@ -242,7 +242,8 @@
         <a data-ig href="#"><svg class="ico"><use href="assets/icons.svg#ig"/></svg>@goldenskate.samsun</a>
       </div>
     </div>
-    <form class="form" data-wa-form novalidate data-reveal>
+    <div class="form-wrap" data-reveal>
+    <form class="form" data-form novalidate>
       <label><span data-i18n="form.name">Veli adı</span><input name="name" autocomplete="name" required></label>
       <label><span data-i18n="form.phone">Telefon</span><input name="phone" type="tel" autocomplete="tel" inputmode="tel" required></label>
       <div class="form__row">
@@ -257,8 +258,15 @@
       </div>
       <label><span data-i18n="form.msg">Not (isteğe bağlı)</span><textarea name="note" rows="3"></textarea></label>
       <p class="form__error" data-form-error hidden role="alert"></p>
-      <button class="btn btn--gold" type="submit"><svg class="ico"><use href="assets/icons.svg#wa"/></svg><span data-i18n="form.submit">WhatsApp’ta gönder</span></button>
+      <button class="btn btn--gold" type="submit" data-i18n="form.submit">Kaydol</button>
     </form>
+    <div class="form form--ok" data-form-ok hidden tabindex="-1" role="status">
+      <svg class="form__ok-icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M15 24.5l6 6 12-13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <h3 data-i18n="form.ok.t">Başvurunuz alındı</h3>
+      <p data-i18n="form.ok.d"></p>
+      <button class="btn btn--line" type="button" data-form-again data-i18n="form.ok.again">Yeni başvuru</button>
+    </div>
+    </div>
   </section>
 </main>
 
@@ -272,7 +280,7 @@
 </footer>
 
 <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js" defer></script>
-<script src="assets/app.js?v=13" defer></script>
-<script src="tracing.js?v=13" defer></script>
+<script src="assets/app.js?v=17" defer></script>
+<script src="tracing.js?v=17" defer></script>
 </body>
 </html>

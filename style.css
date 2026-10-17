@@ -180,7 +180,7 @@ section { position: relative; }
 
 /* camps */
 .camps { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 80px); align-items: center; }
-.camps__img img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 300px 300px 18px 18px; }
+.camps__img img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 300px 300px 18px 18px; }
 .camps__list { display: grid; gap: 22px; margin-top: 36px; }
 .camps__list h3 { font-size: 26px; margin-bottom: 6px; }
 .camps__list p { color: var(--mute); }
@@ -215,6 +215,13 @@ section { position: relative; }
 .form select option { background: var(--deep); }
 .form__row { display: grid; grid-template-columns: 1fr 1.4fr; gap: 14px; }
 .form__error { color: #f3b7a5; font-size: 15px; }
+.form-wrap { align-self: start; min-width: 0; }
+.form--ok { justify-items: start; text-align: left; }
+.form[hidden], .form--ok[hidden] { display: none; }
+.form--ok:focus { outline: none; }
+.form__ok-icon { width: 52px; height: 52px; color: var(--gold); }
+.form--ok h3 { font-size: 34px; font-weight: 300; }
+.form--ok p { color: var(--mute); }
 .form .btn { justify-self: start; }
 
 .foot { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 32px; justify-content: space-between; padding: 28px var(--gutter) 80px; border-top: 1px solid var(--line); color: var(--mute); font-size: 14px; }
@@ -242,8 +249,8 @@ section { position: relative; }
   .school__grid, .results__grid, .camps, .contact, .coaches__grid, .plans { grid-template-columns: 1fr; }
   .school__head { position: static; }
   .results__photo { position: relative; top: auto; aspect-ratio: 4 / 4.4; }
-  .camps__img img { aspect-ratio: 1 / 1; border-radius: 200px 200px 18px 18px; }
-  .hero__shade { background: linear-gradient(180deg, rgba(6,26,32,.5) 0%, rgba(6,26,32,.2) 25%, rgba(6,26,32,.55) 50%, rgba(6,26,32,.95) 100%); }
+  .camps__img img { aspect-ratio: 16 / 9; border-radius: 18px; object-position: 50% 62%; }
+  .hero__shade { background: linear-gradient(180deg, rgba(6,26,32,.55) 0%, rgba(6,26,32,0) 16%), linear-gradient(0deg, rgba(6,26,32,.97) 0%, rgba(6,26,32,.9) 30%, rgba(6,26,32,.45) 50%, rgba(6,26,32,0) 64%); }
   .coach:nth-child(2) { margin-top: 0; }
   .section-head--row { flex-direction: column; align-items: flex-start; gap: 24px; }
   .story { width: 44vw; max-width: 220px; }
@@ -265,8 +272,17 @@ section { position: relative; }
   .burger { width: 40px; height: 40px; }
   .burger span { left: 11px; right: 11px; }
   .burger span:first-child { top: 16px; } .burger span:last-child { top: 23px; }
-  .hero { padding-top: 100px; }
-  .hero__ctas .btn { width: 100%; }
+  .hero { padding: 100px 18px 36px; }
+  .hero .eyebrow { margin-bottom: 12px; font-size: 11px; letter-spacing: .18em; }
+  .hero__title { font-size: 44px; line-height: .98; }
+  .hero__trace { height: 22px; margin: 12px 0 6px; width: 70%; }
+  .hero__sub { font-size: 15px; line-height: 1.5; color: rgba(232,242,241,.82); }
+  .hero__facts { display: none; }
+  .hero__ctas { flex-wrap: nowrap; gap: 10px; margin-top: 22px; }
+  .hero__ctas .btn--gold { flex: 1; min-height: 52px; }
+  .hero__ctas .btn--line { flex: none; width: 52px; min-height: 52px; padding: 0; }
+  .hero__ctas .btn--line .ico { width: 22px; height: 22px; }
+  .hero__ctas .btn--line span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
   h3 { font-size: 26px; }
   .pillar { grid-template-columns: 112px 1fr; gap: 18px; padding-bottom: 22px; }
   .pillar img { width: 112px; height: 150px; border-radius: 60px 60px 10px 10px; }
@@ -275,7 +291,10 @@ section { position: relative; }
   .founder { flex-direction: column; align-items: flex-start; padding: 22px; gap: 16px; }
   .aw { grid-template-columns: 44px 1fr; gap: 6px 14px; }
   .aw__icon { width: 40px; height: 40px; padding: 9px; grid-row: span 2; }
-  .aw > b { grid-column: 2; font-size: 20px; }
+  .aw > b, .aw--final > b, .aw--test > b { grid-column: 2; justify-self: start; margin-top: 4px; padding: 6px 10px; border-radius: 99px; border: 1px solid var(--line); font: 500 11px/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--mute); }
+  .aw--gold > b { color: var(--gold); border-color: rgba(214,178,110,.5); }
+  .aw--silver > b { color: var(--silver); border-color: rgba(201,214,218,.35); }
+  .aw--bronze > b { color: var(--bronze); border-color: rgba(210,154,108,.45); }
   .firsts { padding: 22px; }
   .firsts dl { gap: 8px; }
   .firsts dt { font-size: 44px; }

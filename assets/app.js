@@ -42,11 +42,11 @@
       'results.eyebrow': 'Başarılar', 'results.title': 'İlk sezonun sonuçları.',
       'results.lead': 'Kulüp Ekim 2025’te açıldı. Bir yılda öğrencilerimiz Türkiye ve Rusya’da yarıştı, federasyon testlerini geçti ve ilk zor atlayışlarını yaptı.',
       'results.h.place': 'Derece', 'results.h.event': 'Yarışma / test', 'results.h.athlete': 'Sporcu', 'results.h.date': 'Tarih',
-      'r1.event': '“Golden Star” turnuvası · Rusya', 'r1.place': '2.',
+      'r1.event': '“Golden Star” turnuvası · Rusya', 'r1.place': '2. yer',
       'r2.event': 'Ümitler Türkiye Şampiyonası · Ankara', 'r2.place': 'Finalist', 'r2.note': 'Samsun’u temsil etti',
-      'r3.event': 'Artistik Patinaj İl Birinciliği · Samsun', 'r3.place': '1.',
-      'r4.event': 'İzmir Kupası · İzmir', 'r4.place': '3.',
-      'r5.event': 'Sportoto Kupası · Ankara', 'r5.place': '2.',
+      'r3.event': 'Artistik Patinaj İl Birinciliği · Samsun', 'r3.place': '1. yer',
+      'r4.event': 'İzmir Kupası · İzmir', 'r4.place': '3. yer',
+      'r5.event': 'Sportoto Kupası · Ankara', 'r5.place': '2. yer',
       'r6.event': 'Federasyon testi Basic Novice 2 · Ankara', 'r6.place': 'Geçti', 'r6.note': 'ilk denemede',
       'r7.event': 'Federasyon testi Cubs · Ankara', 'r7.place': 'Geçti',
       'm.title': 'Bu sezon yapılan ilk atlayışlar', 'm.axel': 'Aksel', 'm.2s': 'Çift salchow', 'm.2a': 'Çift aksel',
@@ -80,10 +80,11 @@
       'place.route': 'Yol tarifi al', 'place.hours': 'Antrenman saatleri gruba göre belirlenir',
 
       'contact.eyebrow': 'Kayıt', 'contact.title': 'Deneme dersine yazılın.',
-      'contact.lead': 'Formu doldurun — mesaj WhatsApp’ta hazır olarak açılır. Genellikle aynı gün dönüyoruz.',
+      'contact.lead': 'Formu doldurun — aynı gün içinde size dönüp deneme dersinin saatini birlikte belirleyelim.',
       'form.name': 'Veli adı', 'form.phone': 'Telefon', 'form.age': 'Çocuğun yaşı', 'form.group': 'Grup',
       'form.g.beg': 'Başlangıç', 'form.g.pro': 'Sportif', 'form.g.unsure': 'Emin değilim',
-      'form.msg': 'Not (isteğe bağlı)', 'form.submit': 'WhatsApp’ta gönder',
+      'form.msg': 'Not (isteğe bağlı)', 'form.submit': 'Kaydol',
+      'form.ok.t': 'Başvurunuz alındı', 'form.ok.d': 'Teşekkürler! Kısa süre içinde sizinle iletişime geçeceğiz.', 'form.ok.again': 'Yeni başvuru',
       'form.err.name': 'Adınızı yazın.', 'form.err.phone': 'Size ulaşabileceğimiz bir numara yazın.',
       'form.wa.hello': 'Merhaba! Deneme dersine kaydolmak istiyorum.', 'form.wa.name': 'Veli', 'form.wa.phone': 'Telefon',
       'form.wa.age': 'Çocuğun yaşı', 'form.wa.group': 'Grup', 'form.wa.note': 'Not',
@@ -133,11 +134,11 @@
       'results.eyebrow': 'Результаты', 'results.title': 'Итоги первого сезона.',
       'results.lead': 'Клуб открылся в октябре 2025. За год наши ученики выступили в Турции и России, сдали тесты федерации и сделали первые сложные прыжки.',
       'results.h.place': 'Место', 'results.h.event': 'Соревнование / тест', 'results.h.athlete': 'Спортсмен', 'results.h.date': 'Дата',
-      'r1.event': 'Турнир «Golden Star» · Россия', 'r1.place': '2',
+      'r1.event': 'Турнир «Golden Star» · Россия', 'r1.place': '2 место',
       'r2.event': 'Первенство Турции среди юниоров (Ümitler) · Анкара', 'r2.place': 'Финал', 'r2.note': 'представляла Самсун',
-      'r3.event': 'Первенство провинции Самсун', 'r3.place': '1',
-      'r4.event': 'Кубок Измира · Измир', 'r4.place': '3',
-      'r5.event': 'Кубок Sportoto · Анкара', 'r5.place': '2',
+      'r3.event': 'Первенство провинции Самсун', 'r3.place': '1 место',
+      'r4.event': 'Кубок Измира · Измир', 'r4.place': '3 место',
+      'r5.event': 'Кубок Sportoto · Анкара', 'r5.place': '2 место',
       'r6.event': 'Тест федерации Basic Novice 2 · Анкара', 'r6.place': 'Сдан', 'r6.note': 'с первой попытки',
       'r7.event': 'Тест федерации Cubs · Анкара', 'r7.place': 'Сдан',
       'm.title': 'Первые прыжки этого сезона', 'm.axel': 'Аксель', 'm.2s': 'Двойной сальхов', 'm.2a': 'Двойной аксель',
@@ -171,10 +172,11 @@
       'place.route': 'Построить маршрут', 'place.hours': 'Время тренировок зависит от группы',
 
       'contact.eyebrow': 'Запись', 'contact.title': 'Запишитесь на пробное занятие.',
-      'contact.lead': 'Заполните форму — сообщение откроется в WhatsApp уже готовым. Обычно отвечаем в тот же день.',
+      'contact.lead': 'Оставьте заявку — в течение дня свяжемся с вами и подберём время пробного занятия.',
       'form.name': 'Имя родителя', 'form.phone': 'Телефон', 'form.age': 'Возраст ребёнка', 'form.group': 'Группа',
       'form.g.beg': 'Начинающие', 'form.g.pro': 'Спортивная', 'form.g.unsure': 'Пока не знаю',
-      'form.msg': 'Комментарий (необязательно)', 'form.submit': 'Отправить в WhatsApp',
+      'form.msg': 'Комментарий (необязательно)', 'form.submit': 'Записаться',
+      'form.ok.t': 'Заявка принята', 'form.ok.d': 'Спасибо! Мы свяжемся с вами в ближайшее время.', 'form.ok.again': 'Новая заявка',
       'form.err.name': 'Напишите ваше имя.', 'form.err.phone': 'Укажите номер, по которому с вами связаться.',
       'form.wa.hello': 'Здравствуйте! Хочу записаться на пробное занятие.', 'form.wa.name': 'Родитель', 'form.wa.phone': 'Телефон',
       'form.wa.age': 'Возраст ребёнка', 'form.wa.group': 'Группа', 'form.wa.note': 'Комментарий',
@@ -224,11 +226,11 @@
       'results.eyebrow': 'Results', 'results.title': 'Our first season.',
       'results.lead': 'The club opened in October 2025. In one year our students competed in Turkey and Russia, passed federation tests and landed their first difficult jumps.',
       'results.h.place': 'Place', 'results.h.event': 'Competition / test', 'results.h.athlete': 'Skater', 'results.h.date': 'Date',
-      'r1.event': '“Golden Star” tournament · Russia', 'r1.place': '2nd',
+      'r1.event': '“Golden Star” tournament · Russia', 'r1.place': '2nd place',
       'r2.event': 'Turkish Junior Championship (Ümitler) · Ankara', 'r2.place': 'Finalist', 'r2.note': 'represented Samsun',
-      'r3.event': 'Samsun Provincial Championship', 'r3.place': '1st',
-      'r4.event': 'İzmir Cup · İzmir', 'r4.place': '3rd',
-      'r5.event': 'Sportoto Cup · Ankara', 'r5.place': '2nd',
+      'r3.event': 'Samsun Provincial Championship', 'r3.place': '1st place',
+      'r4.event': 'İzmir Cup · İzmir', 'r4.place': '3rd place',
+      'r5.event': 'Sportoto Cup · Ankara', 'r5.place': '2nd place',
       'r6.event': 'Federation test Basic Novice 2 · Ankara', 'r6.place': 'Passed', 'r6.note': 'first attempt',
       'r7.event': 'Federation test Cubs · Ankara', 'r7.place': 'Passed',
       'm.title': 'First jumps landed this season', 'm.axel': 'Axel', 'm.2s': 'Double salchow', 'm.2a': 'Double axel',
@@ -262,10 +264,11 @@
       'place.route': 'Get directions', 'place.hours': 'Training times depend on the group',
 
       'contact.eyebrow': 'Sign up', 'contact.title': 'Book a trial lesson.',
-      'contact.lead': 'Fill in the form and the message opens ready in WhatsApp. We usually reply the same day.',
+      'contact.lead': 'Leave a request and we will get back to you the same day to set a time for the trial lesson.',
       'form.name': 'Parent’s name', 'form.phone': 'Phone', 'form.age': 'Child’s age', 'form.group': 'Group',
       'form.g.beg': 'Beginners', 'form.g.pro': 'Competitive', 'form.g.unsure': 'Not sure yet',
-      'form.msg': 'Note (optional)', 'form.submit': 'Send on WhatsApp',
+      'form.msg': 'Note (optional)', 'form.submit': 'Sign up',
+      'form.ok.t': 'Request received', 'form.ok.d': 'Thank you! We will be in touch shortly.', 'form.ok.again': 'New request',
       'form.err.name': 'Enter your name.', 'form.err.phone': 'Enter a number we can reach you on.',
       'form.wa.hello': 'Hello! I would like to book a trial lesson.', 'form.wa.name': 'Parent', 'form.wa.phone': 'Phone',
       'form.wa.age': 'Child’s age', 'form.wa.group': 'Group', 'form.wa.note': 'Note',
@@ -483,8 +486,9 @@
     if (lastFocus) lastFocus.focus();
   }
 
-  /* ---------- form → WhatsApp ---------- */
-  document.querySelectorAll('[data-wa-form]').forEach(function (f) {
+  /* ---------- sign-up form: validated locally; not sent anywhere yet ---------- */
+  document.querySelectorAll('[data-form]').forEach(function (f) {
+    var ok = f.parentElement.querySelector('[data-form-ok]');
     f.addEventListener('submit', function (e) {
       e.preventDefault();
       var name = f.elements.name.value.trim();
@@ -499,12 +503,13 @@
         return;
       }
       if (err) err.hidden = true;
-      var g = f.elements.group ? f.elements.group.value : '';
-      var lines = [t('form.wa.hello'), '', t('form.wa.name') + ': ' + name, t('form.wa.phone') + ': ' + phone];
-      if (f.elements.age && f.elements.age.value) lines.push(t('form.wa.age') + ': ' + f.elements.age.value);
-      if (g) lines.push(t('form.wa.group') + ': ' + t('form.g.' + g));
-      if (f.elements.note && f.elements.note.value.trim()) lines.push(t('form.wa.note') + ': ' + f.elements.note.value.trim());
-      window.open('https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(lines.join('\n')), '_blank', 'noopener');
+      // TODO: connect a backend (e-mail / CRM / Telegram bot) — for now the request stays in the browser
+      f.reset();
+      f.hidden = true;
+      if (ok) { ok.hidden = false; ok.focus(); }
+    });
+    if (ok) ok.querySelector('[data-form-again]').addEventListener('click', function () {
+      ok.hidden = true; f.hidden = false; f.elements.name.focus();
     });
   });
 
