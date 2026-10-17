@@ -42,9 +42,12 @@ p { margin: 0; }
 .icon-btn:hover { border-color: var(--gold); color: var(--gold-2); }
 
 /* header — the blur lives on ::before so the fixed mobile menu is not trapped inside the header */
-.top { position: fixed; z-index: 50; inset: 0 0 auto; display: flex; align-items: center; gap: 24px; padding: 16px var(--gutter); transition: padding .4s; }
-.top::before { content: ''; position: absolute; inset: 0; z-index: -1; background: rgba(6, 26, 32, .82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); opacity: 0; transition: opacity .4s; }
-.top.is-solid { padding-block: 10px; }
+.top { position: fixed; z-index: 50; inset: 0 0 auto; display: flex; align-items: center; gap: 24px; padding: calc(16px + env(safe-area-inset-top)) max(var(--gutter), env(safe-area-inset-right)) 16px max(var(--gutter), env(safe-area-inset-left)); transition: padding .4s, background-color .4s; }
+/* the panel reaches 120px above the header so nothing shows through under iOS Safari's status bar / floating address bar */
+.top::before { content: ''; position: absolute; inset: -120px 0 0; z-index: -1; background: rgba(6, 26, 32, .86); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); opacity: 0; transition: opacity .4s; }
+/* a solid colour on the header itself lets Safari 26 tint the top bar to match */
+.top.is-solid { padding-top: calc(10px + env(safe-area-inset-top)); padding-bottom: 10px; background-color: rgba(6, 26, 32, .94); }
+.nav__langs { display: none; }
 .top.is-solid::before { opacity: 1; }
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--gold); flex: none; }
 .brand__mark { width: 44px; height: 18px; }
@@ -260,7 +263,11 @@ section { position: relative; }
 }
 @media (max-width: 560px) {
   body { font-size: 16px; }
-  .top { padding-inline: 14px; gap: 8px; }
+  .top { gap: 10px; padding: calc(10px + env(safe-area-inset-top)) 16px 10px; }
+  .top.is-solid { padding-top: calc(8px + env(safe-area-inset-top)); padding-bottom: 8px; }
+  .top__end > .langs { display: none; }
+  .nav__langs { display: flex; margin-top: 18px; height: 48px; }
+  .nav .nav__langs a { height: 40px; padding: 0 16px; font: 500 14px/1 var(--sans); letter-spacing: .08em; opacity: 1; }
   .brand { gap: 8px; }
   .brand__word { font-size: 13px; letter-spacing: .18em; }
   .brand__word small { letter-spacing: .3em; }

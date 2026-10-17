@@ -1,19 +1,20 @@
 <!doctype html>
-<html lang="{{LANG}}" data-assets="../assets/">
+<html lang="{{LANG}}" data-assets="{{BASE}}assets/">
 <head>
 <meta charset="utf-8">
+{{REDIRECT}}
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{{TITLE}}</title>
 <meta name="description" content="{{DESC}}">
 {{ALTERNATES}}
 <meta name="theme-color" content="#061a20">
-<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="{{BASE}}favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
-<link rel="stylesheet" href="../assets/base.css?v=19">
-<link rel="stylesheet" href="../assets/style.css?v=19">
+<link rel="stylesheet" href="{{BASE}}assets/base.css?v=21">
+<link rel="stylesheet" href="{{BASE}}assets/style.css?v=21">
 </head>
 <body>
 
@@ -32,12 +33,13 @@
     <a href="#stories" data-i18n="nav.stories">Videolar</a>
     <a href="#groups" data-i18n="nav.pricing">Gruplar</a>
     <a href="#contact" data-i18n="nav.contact">İletişim</a>
+    <div class="langs nav__langs" role="group" data-i18n-aria="lang.label" aria-label="Dil"><a data-lang="tr" hreflang="tr" lang="tr" href="{{HREF_TR}}">TR</a><a data-lang="ru" hreflang="ru" lang="ru" href="{{HREF_RU}}">RU</a><a data-lang="en" hreflang="en" lang="en" href="{{HREF_EN}}">EN</a></div>
   </nav>
   <div class="top__end">
     <div class="langs" role="group" data-i18n-aria="lang.label" aria-label="Dil">
-      <a data-lang="tr" hreflang="tr" lang="tr" href="../tr/">TR</a><a data-lang="ru" hreflang="ru" lang="ru" href="../ru/">RU</a><a data-lang="en" hreflang="en" lang="en" href="../en/">EN</a>
+      <a data-lang="tr" hreflang="tr" lang="tr" href="{{HREF_TR}}">TR</a><a data-lang="ru" hreflang="ru" lang="ru" href="{{HREF_RU}}">RU</a><a data-lang="en" hreflang="en" lang="en" href="{{HREF_EN}}">EN</a>
     </div>
-    <a class="icon-btn" data-wa target="_blank" rel="noopener" href="#" aria-label="WhatsApp"><svg><use href="../assets/icons.svg#wa"/></svg></a>
+    <a class="icon-btn" data-wa target="_blank" rel="noopener" href="#" aria-label="WhatsApp"><svg><use href="{{BASE}}assets/icons.svg#wa"/></svg></a>
     <a class="btn btn--ghost top__cta" href="#contact" data-i18n="cta.trial">Ücretsiz deneme dersi</a>
     <button class="burger" type="button" data-nav-toggle aria-expanded="false" data-i18n-aria="nav.menu" aria-label="Menü"><span></span><span></span></button>
   </div>
@@ -45,10 +47,10 @@
 
 <main id="top">
   <section class="hero">
-    <video class="hero__video" data-hero autoplay muted loop playsinline preload="auto" poster="../assets/img/poster-teal.webp">
-      <source src="../assets/video/hero-a-720.mp4" type="video/mp4" media="(max-width: 800px)">
-      <source src="../assets/video/hero-a-1080.webm" type='video/webm; codecs="av01.0.08M.10"'>
-      <source src="../assets/video/hero-a-1080.mp4" type="video/mp4">
+    <video class="hero__video" data-hero autoplay muted loop playsinline preload="auto" poster="{{BASE}}assets/img/poster-teal.webp">
+      <source src="{{BASE}}assets/video/hero-a-720.mp4" type="video/mp4" media="(max-width: 800px)">
+      <source src="{{BASE}}assets/video/hero-a-1080.webm" type='video/webm; codecs="av01.0.08M.10"'>
+      <source src="{{BASE}}assets/video/hero-a-1080.mp4" type="video/mp4">
     </video>
     <div class="hero__shade"></div>
     <div class="hero__inner">
@@ -58,7 +60,7 @@
       <p class="hero__sub" data-i18n="hero.sub">Rusya’dan gelen antrenörler, 3 yaşından itibaren çocuklar için buz, bale ve kara antrenmanını tek programda birleştiriyor.</p>
       <div class="hero__ctas">
         <a class="btn btn--gold" href="#contact" data-i18n="cta.trial">Ücretsiz deneme dersi</a>
-        <a class="btn btn--line" data-wa target="_blank" rel="noopener" href="#"><svg class="ico"><use href="../assets/icons.svg#wa"/></svg><span data-i18n="cta.wa">WhatsApp’tan yazın</span></a>
+        <a class="btn btn--line" data-wa target="_blank" rel="noopener" href="#"><svg class="ico"><use href="{{BASE}}assets/icons.svg#wa"/></svg><span data-i18n="cta.wa">WhatsApp’tan yazın</span></a>
       </div>
     </div>
     <ul class="hero__facts">
@@ -81,21 +83,21 @@
         </div>
         <div class="school__list">
           <article class="pillar" data-reveal>
-            <img src="../assets/img/m-ice.webp" alt="" loading="lazy" width="1000" height="1500">
+            <img src="{{BASE}}assets/img/m-ice.webp" alt="" loading="lazy" width="1000" height="1500">
             <div><h3 data-i18n="method.ice.t">Buz</h3><p data-i18n="method.ice.d"></p></div>
           </article>
           <article class="pillar" data-reveal>
-            <img src="../assets/img/m-ballet.webp" alt="" loading="lazy" width="1000" height="1500">
+            <img src="{{BASE}}assets/img/m-ballet.webp" alt="" loading="lazy" width="1000" height="1500">
             <div><h3 data-i18n="method.ballet.t">Bale ve koreografi</h3><p data-i18n="method.ballet.d"></p></div>
           </article>
           <article class="pillar" data-reveal>
-            <img src="../assets/img/m-office.webp" alt="" loading="lazy" width="1000" height="1500">
+            <img src="{{BASE}}assets/img/m-office.webp" alt="" loading="lazy" width="1000" height="1500">
             <div><h3 data-i18n="method.off.t">Kara antrenmanı</h3><p data-i18n="method.off.d"></p></div>
           </article>
         </div>
       </div>
       <aside class="founder" data-reveal>
-        <img src="../assets/img/coach-olga.webp" alt="Olga Tikhankina" loading="lazy" width="900" height="1350">
+        <img src="{{BASE}}assets/img/coach-olga.webp" alt="Olga Tikhankina" loading="lazy" width="900" height="1350">
         <div>
           <p class="eyebrow" data-i18n="founder.label">Kurucu</p>
           <p class="founder__name">Olga Tikhankina</p>
@@ -112,14 +114,14 @@
       </div>
       <div class="coaches__grid">
         <article class="coach" data-reveal>
-          <figure><img src="../assets/img/coach-daniil.webp" alt="Daniil Averkiev" loading="lazy" width="900" height="1350"></figure>
+          <figure><img src="{{BASE}}assets/img/coach-daniil.webp" alt="Daniil Averkiev" loading="lazy" width="900" height="1350"></figure>
           <p class="coach__rank" data-i18n="coach.daniil.rank">Spor Ustası</p>
           <h3>Daniil Averkiev</h3>
           <p class="coach__role" data-i18n="coach.daniil.role"></p>
           <p class="coach__bio" data-i18n="coach.daniil.bio"></p>
         </article>
         <article class="coach" data-reveal>
-          <figure><img src="../assets/img/coach-alina.webp" alt="Alina Shafranova" loading="lazy" width="900" height="1350"></figure>
+          <figure><img src="{{BASE}}assets/img/coach-alina.webp" alt="Alina Shafranova" loading="lazy" width="900" height="1350"></figure>
           <p class="coach__rank" data-i18n="coach.alina.rank">Spor Ustası Adayı</p>
           <h3>Alina Shafranova</h3>
           <p class="coach__role" data-i18n="coach.alina.role"></p>
@@ -136,17 +138,17 @@
       </div>
       <div class="results__grid">
         <figure class="results__photo" data-reveal>
-          <img src="../assets/img/r-podium.webp" alt="" loading="lazy" width="1000" height="1500">
+          <img src="{{BASE}}assets/img/r-podium.webp" alt="" loading="lazy" width="1000" height="1500">
           <figcaption>İzmir · 2026</figcaption>
         </figure>
         <div class="results__body">
           <ul class="awards" data-reveal>
-            <li class="aw aw--silver"><svg class="aw__icon"><use href="../assets/icons.svg#medal"/></svg><div><strong data-i18n="r1.event"></strong><em>Nehir N. · 2026</em></div><b data-i18n="r1.place">2. yer</b></li>
-            <li class="aw aw--final"><svg class="aw__icon"><use href="../assets/icons.svg#trophy"/></svg><div><strong data-i18n="r2.event"></strong><em>Nehir N. · <span data-i18n="r2.note"></span> · 03.2026</em></div><b data-i18n="r2.place">Finalist</b></li>
-            <li class="aw aw--gold"><svg class="aw__icon"><use href="../assets/icons.svg#medal"/></svg><div><strong data-i18n="r3.event"></strong><em>Azra Y. · 04.2026</em></div><b data-i18n="r3.place">1. yer</b></li>
-            <li class="aw aw--bronze"><svg class="aw__icon"><use href="../assets/icons.svg#medal"/></svg><div><strong data-i18n="r4.event"></strong><em>Feyza G. · 02.2026</em></div><b data-i18n="r4.place">3. yer</b></li>
-            <li class="aw aw--silver"><svg class="aw__icon"><use href="../assets/icons.svg#medal"/></svg><div><strong data-i18n="r5.event"></strong><em>Ezgi K. · 05.2026</em></div><b data-i18n="r5.place">2. yer</b></li>
-            <li class="aw aw--test"><svg class="aw__icon"><use href="../assets/icons.svg#seal"/></svg><div><strong data-i18n="r6.event"></strong><em>Nehir N. · <span data-i18n="r6.note"></span> · 10.2026</em></div><b data-i18n="r6.place">Geçti</b></li>
+            <li class="aw aw--silver"><svg class="aw__icon"><use href="{{BASE}}assets/icons.svg#medal"/></svg><div><strong data-i18n="r1.event"></strong><em>Nehir N. · 2026</em></div><b data-i18n="r1.place">2. yer</b></li>
+            <li class="aw aw--final"><svg class="aw__icon"><use href="{{BASE}}assets/icons.svg#trophy"/></svg><div><strong data-i18n="r2.event"></strong><em>Nehir N. · <span data-i18n="r2.note"></span> · 03.2026</em></div><b data-i18n="r2.place">Finalist</b></li>
+            <li class="aw aw--gold"><svg class="aw__icon"><use href="{{BASE}}assets/icons.svg#medal"/></svg><div><strong data-i18n="r3.event"></strong><em>Azra Y. · 04.2026</em></div><b data-i18n="r3.place">1. yer</b></li>
+            <li class="aw aw--bronze"><svg class="aw__icon"><use href="{{BASE}}assets/icons.svg#medal"/></svg><div><strong data-i18n="r4.event"></strong><em>Feyza G. · 02.2026</em></div><b data-i18n="r4.place">3. yer</b></li>
+            <li class="aw aw--silver"><svg class="aw__icon"><use href="{{BASE}}assets/icons.svg#medal"/></svg><div><strong data-i18n="r5.event"></strong><em>Ezgi K. · 05.2026</em></div><b data-i18n="r5.place">2. yer</b></li>
+            <li class="aw aw--test"><svg class="aw__icon"><use href="{{BASE}}assets/icons.svg#seal"/></svg><div><strong data-i18n="r6.event"></strong><em>Nehir N. · <span data-i18n="r6.note"></span> · 10.2026</em></div><b data-i18n="r6.place">Geçti</b></li>
           </ul>
           <div class="firsts" data-reveal>
             <p class="firsts__title" data-i18n="m.title">Bu sezon yapılan ilk atlayışlar</p>
@@ -166,11 +168,11 @@
         <div>
           <p class="eyebrow" data-i18n="stories.eyebrow">Buzdan</p>
           <h2 data-i18n="stories.title">Antrenmanlardan kareler.</h2>
-          <p class="lead"><span data-i18n="stories.lead"></span> <a data-ig class="link"><svg class="ico"><use href="../assets/icons.svg#ig"/></svg>@goldenskate.samsun</a></p>
+          <p class="lead"><span data-i18n="stories.lead"></span> <a data-ig class="link"><svg class="ico"><use href="{{BASE}}assets/icons.svg#ig"/></svg>@goldenskate.samsun</a></p>
         </div>
         <div class="rail-ctrl">
-          <button type="button" class="rail-btn" data-rail-prev data-i18n-aria="stories.prev" aria-label="Önceki"><svg><use href="../assets/icons.svg#arrow-l"/></svg></button>
-          <button type="button" class="rail-btn" data-rail-next data-i18n-aria="stories.next" aria-label="Sonraki"><svg><use href="../assets/icons.svg#arrow-r"/></svg></button>
+          <button type="button" class="rail-btn" data-rail-prev data-i18n-aria="stories.prev" aria-label="Önceki"><svg><use href="{{BASE}}assets/icons.svg#arrow-l"/></svg></button>
+          <button type="button" class="rail-btn" data-rail-next data-i18n-aria="stories.next" aria-label="Sonraki"><svg><use href="{{BASE}}assets/icons.svg#arrow-r"/></svg></button>
         </div>
       </div>
       <div class="rail-wrap">
@@ -206,7 +208,7 @@
     </section>
 
     <section class="camps">
-      <div class="camps__img" data-reveal><img src="../assets/img/spin.webp" alt="" loading="lazy" width="1536" height="1024"></div>
+      <div class="camps__img" data-reveal><img src="{{BASE}}assets/img/spin.webp" alt="" loading="lazy" width="1536" height="1024"></div>
       <div class="camps__body" data-reveal>
         <p class="eyebrow" data-i18n="camps.eyebrow">Kamplar ve misafirler</p>
         <h2 data-i18n="camps.title">Sezon sadece salonda geçmiyor.</h2>
@@ -239,8 +241,8 @@
       <p class="lead" data-i18n="contact.lead"></p>
       <p class="contact__or" data-i18n="contact.or">veya doğrudan</p>
       <div class="contact__direct">
-        <a data-wa target="_blank" rel="noopener" href="#"><svg class="ico"><use href="../assets/icons.svg#wa"/></svg>+90 533 518 32 01</a>
-        <a data-ig href="#"><svg class="ico"><use href="../assets/icons.svg#ig"/></svg>@goldenskate.samsun</a>
+        <a data-wa target="_blank" rel="noopener" href="#"><svg class="ico"><use href="{{BASE}}assets/icons.svg#wa"/></svg>+90 533 518 32 01</a>
+        <a data-ig href="#"><svg class="ico"><use href="{{BASE}}assets/icons.svg#ig"/></svg>@goldenskate.samsun</a>
       </div>
     </div>
     <div class="form-wrap" data-reveal>
@@ -275,14 +277,14 @@
   <span data-i18n="footer.rights">© 2026 GoldenSkate Samsun</span>
   <span data-i18n="footer.net"></span>
   <span class="foot__social">
-    <a data-wa target="_blank" rel="noopener" href="#" aria-label="WhatsApp"><svg><use href="../assets/icons.svg#wa"/></svg></a>
-    <a data-ig href="#" aria-label="Instagram"><svg><use href="../assets/icons.svg#ig"/></svg></a>
+    <a data-wa target="_blank" rel="noopener" href="#" aria-label="WhatsApp"><svg><use href="{{BASE}}assets/icons.svg#wa"/></svg></a>
+    <a data-ig href="#" aria-label="Instagram"><svg><use href="{{BASE}}assets/icons.svg#ig"/></svg></a>
   </span>
 </footer>
 
 <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js" defer></script>
-<script src="../assets/i18n.js?v=19" defer></script>
-<script src="../assets/app.js?v=19" defer></script>
-<script src="../assets/tracing.js?v=19" defer></script>
+<script src="{{BASE}}assets/i18n.js?v=21" defer></script>
+<script src="{{BASE}}assets/app.js?v=21" defer></script>
+<script src="{{BASE}}assets/tracing.js?v=21" defer></script>
 </body>
 </html>

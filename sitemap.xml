@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url><loc>https://golden-skate.com/tr/</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://golden-skate.com/tr/"/>
+  <url><loc>https://golden-skate.com/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://golden-skate.com/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://golden-skate.com/ru/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://golden-skate.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golden-skate.com/"/>
   </url>
   <url><loc>https://golden-skate.com/ru/</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://golden-skate.com/tr/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://golden-skate.com/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://golden-skate.com/ru/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://golden-skate.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golden-skate.com/"/>
   </url>
   <url><loc>https://golden-skate.com/en/</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://golden-skate.com/tr/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://golden-skate.com/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://golden-skate.com/ru/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://golden-skate.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golden-skate.com/"/>
   </url>
 </urlset>
